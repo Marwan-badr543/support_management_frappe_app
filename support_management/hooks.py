@@ -5,6 +5,66 @@ app_description = "This app to manage all stages of customer issues in one place
 app_email = "marwanbadr514@gmail.com"
 app_license = "mit"
 
+
+doc_events = {
+    "Issue": {
+        "validate": "support_management.utils.issue_logic.handle_workflow_action",
+        "before_save": "support_management.utils.issue_logic.validate_status",
+        "on_update": "support_management.utils.issue_logic.create_tech_doc"
+    },
+    "Tech Supprot Issue": {
+        "on_update": "support_management.utils.tech_logic.handle_tech_wrokflow"
+    }
+}
+
+permission_query_conditions = {
+    "Tech Supprot Issue": "support_management.utils.permissions.get_permission_query_conditions",
+    "Maint Tech Supprot Issue": "support_management.utils.permissions.get_permission_query_conditions_maint",
+}
+
+
+has_permission = {
+    "Tech Supprot Issue": "support_management.utils.permissions.has_permission",
+    "Maint Tech Supprot Issue": "support_management.utils.permissions.has_permission_maint",
+}
+
+app_include_js = "/assets/support_management/js/issue.js"
+
+
+
+fixtures = [
+    {
+        "dt": "Custom Field",
+        "filters": [
+            ["dt", "in", ["Issue","Maintenance Visit"]]
+        ]
+    },
+    {
+        "dt": "Property Setter",
+        "filters": [
+            ["doc_type", "in", ["Issue","Maintenance Visit"]]
+        ]
+    },
+    {
+        "dt": "Workflow",
+        "filters": [
+            ["name", "in", ["supprot managemtn", "maint tech", "tech"]] 
+        ]
+    },
+    {
+        "dt": "Workflow State",
+        "filters": [
+            ["name", "in", ["Draft", "Closed", "Technician","Customer Service","Maint Tech","Rejected"]]
+        ]
+    }
+]
+
+
+
+
+
+
+
 # Apps
 # ------------------
 

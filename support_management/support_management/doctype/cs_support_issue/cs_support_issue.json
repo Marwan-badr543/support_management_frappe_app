@@ -1,0 +1,144 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "CS-ISSUE-.#####",
+ "creation": "2026-05-25 19:04:08.151192",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_data_section",
+  "subject",
+  "customer",
+  "customer_phone",
+  "column_break_tnsk",
+  "status",
+  "priority",
+  "section_break_ujzv",
+  "description",
+  "report",
+  "close_section",
+  "assigned_tech"
+ ],
+ "fields": [
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "default": "Open",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Open\nReplied\nOn Hold\nResolved\nClosed"
+  },
+  {
+   "fieldname": "column_break_tnsk",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Low",
+   "fieldname": "priority",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Priority",
+   "options": "Issue Priority",
+   "reqd": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_ujzv",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "report",
+   "fieldtype": "Small Text",
+   "label": "Report"
+  },
+  {
+   "fieldname": "general_data_section",
+   "fieldtype": "Section Break",
+   "label": "General Data"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "close_section",
+   "fieldtype": "Section Break",
+   "label": "Technician"
+  },
+  {
+   "fieldname": "assigned_tech",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Assigned Tech",
+   "options": "User"
+  },
+  {
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-05-26 15:22:49.248460",
+ "modified_by": "Administrator",
+ "module": "Support Management",
+ "name": "CS Support Issue",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "customer service",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "subject",
+ "track_changes": 1
+}

@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "TSI.####",
+ "creation": "2026-05-26 15:18:51.898781",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "general_section",
+  "issue",
+  "technician",
+  "item_code",
+  "serial_number",
+  "customer",
+  "column_break_efeo",
+  "visit_date",
+  "dt",
+  "address",
+  "details_section",
+  "description",
+  "report",
+  "pickup_info_section",
+  "pickup_date",
+  "column_break_olax",
+  "pickup_time",
+  "maint_tech_section",
+  "maintenance_technician"
+ ],
+ "fields": [
+  {
+   "fieldname": "issue",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Issue",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "visit_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Visit Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "dt",
+   "fieldtype": "Time",
+   "in_list_view": 1,
+   "label": "Visit Time",
+   "reqd": 1
+  },
+  {
+   "fieldname": "general_section",
+   "fieldtype": "Section Break",
+   "label": "General"
+  },
+  {
+   "fieldname": "technician",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Technician",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_efeo",
+   "fieldtype": "Column Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "details_section",
+   "fieldtype": "Section Break",
+   "label": "Details"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  },
+  {
+   "fieldname": "report",
+   "fieldtype": "Small Text",
+   "label": "Report"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "pickup_info_section",
+   "fieldtype": "Section Break",
+   "label": "Pickup Info"
+  },
+  {
+   "fieldname": "pickup_date",
+   "fieldtype": "Date",
+   "label": "Pickup Date"
+  },
+  {
+   "fieldname": "column_break_olax",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pickup_time",
+   "fieldtype": "Time",
+   "label": "Pickup Time"
+  },
+  {
+   "fieldname": "maint_tech_section",
+   "fieldtype": "Section Break",
+   "label": "Maint Tech"
+  },
+  {
+   "fieldname": "maintenance_technician",
+   "fieldtype": "Link",
+   "label": "Maintenance Technician",
+   "options": "User"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address",
+   "options": "Address"
+  },
+  {
+   "fieldname": "item_code",
+   "fieldtype": "Data",
+   "label": "Item Code",
+   "read_only": 1
+  },
+  {
+   "fieldname": "serial_number",
+   "fieldtype": "Data",
+   "label": "Serial Number",
+   "read_only": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Data",
+   "label": "Customer",
+   "read_only": 1
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [
+  {
+   "link_doctype": "Maintenance Visit",
+   "link_fieldname": "custom_tech_issue"
+  }
+ ],
+ "modified": "2026-06-03 14:35:49.675774",
+ "modified_by": "Administrator",
+ "module": "Support Management",
+ "name": "Tech Supprot Issue",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Technician",
+   "select": 1,
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "show_title_field_in_link": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "issue"
+}
