@@ -64,6 +64,7 @@ fixtures = [
 
 required_apps = ["erpnext"]
 
+after_install = "support_management.utils.setup_roles.create_role_profile"
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [
